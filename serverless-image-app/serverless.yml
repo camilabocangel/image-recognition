@@ -10,6 +10,7 @@ package:
     - '!package.json'
     - '!package-lock.json'
     - '!README.md'
+    - '!.serverless/**'
     - '!.gitignore'
 
 provider:
