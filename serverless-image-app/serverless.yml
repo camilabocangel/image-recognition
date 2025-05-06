@@ -30,21 +30,13 @@ provider:
         - arn:aws:s3:::${file(config.json):S3_IMAGE_BUCKET}/*
 
 functions:
-getSignedUrl: 
-  handler: handler.getSignedUrl
-  events:
-    - http:
-        path: sign-url
-        method: get
-        cors: true
-
-functions:
-  hello:
-    handler: handler.hello
+  getSignedUrl: 
+    handler: handler.getSignedUrl
     events:
-      - httpApi:
-          path: /
+      - http:
+          path: sign-url
           method: get
+          cors: true
 
 resources:
   Resources:
